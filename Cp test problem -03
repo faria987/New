@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string s;
+    cin >> s;
+    map<char, int> cnt;
+    for (char c : s) {
+        if (c=='a' || c=='e' || c=='i' || c=='o' || c=='u') {
+            cnt[c]++;
+        }
+    }
+    if (cnt['a']==1 && cnt['e']==1 && cnt['i']==1 && cnt['o']==1 && cnt['u']==1)
+        cout << "string is beautiful\n";
+    else
+        cout << "string is not beautiful\n";
+
+    return 0;
+}
