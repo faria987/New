@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string n;
+    cin >> n;
+
+    set<int> primes; // to store unique prime digits
+
+    for(char c : n) {
+        int d = c - '0';
+        if(d == 2 || d == 3 || d == 5 || d == 7) {
+            primes.insert(d);
+        }
+    }
+
+    int sum = 0;
+    for(int x : primes) sum += x;
+
+    cout << sum << endl;
+    return 0;
+}
